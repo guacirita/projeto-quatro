@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 62.5% equivale a 10px, para facilitar os ajustes das medidades de px para REM */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  background: #ECE9FD;
+  padding: 6.0rem 2.3rem 7.7rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+
+
+main {
+  max-width: 33.0rem;
+  margin: 0 auto;
+}
+
+
+h1 {
+  font-size: 4.0rem;
+  font-weight: 800;
+  line-height: 4.8rem;
+  color: #090039;
+  margin-bottom: 1.5rem;
+}
+
+
+main p:first-child {
+  font-weight: 400;
+  color: #7158EF;
+
+  letter-spacing: 0.3rem;  /*neste caso valores menores de 4 px, pode deixar em pixel mesmo*/
+  text-transform: uppercase;
+  margin-bottom: 1.7rem;
+}
+
+h1 + p {
+  color: rgba(10, 0, 57, 0.64);
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+  text-decoration: none;
+
+}
+
+a:hover {
+  color: #685bae;
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+  list-style: none;
+}
+
+ul li {
+  color: #090039;
+  font-size: 2.4rem;
+  font-weight: 700; 
+  line-height: 3.2rem;
+  max-width: 25.7rem;
+
+  display: flex;
+  
+  gap: 3.8rem;
+
+  /* gap: 2.6rem; */
+
+}
+
+/*tem uma != entre o  tamanho do 1, 2, 3 por isso muda o gap geral e 
+aumenta somente no primeiro item e assim iguala os espaçamentos
+entre numero e texto*/
+
+/* ul li:first-child { */
+  /* gap: 3.8rem; */
+/* } */
+
+
+/*tbm é possível criar uma largura mínima dos numeros e 
+não mexer nos itens separados como informado acima*/
+
+ul li span {
+  font-size: 7.2rem;
+ 
+  font-weight: 800;
+  line-height: 8.0rem;
+ 
+  letter-spacing: -2px;  /* valor menor que 4px */
+  color: #090039;
+  min-width: 4.5rem;
+}
+
+
+/*Aqui posso deixar em pixels, pois não interfere na responsividade, por ser telas maiores*/
+@media (min-width: 700px) {
+
+  body {
+    padding: 8rem;
+  }
+
+  main {
+    max-width: 1020px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+
+  
+}
